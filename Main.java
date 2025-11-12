@@ -5,12 +5,17 @@ import java.awt.*;
 
 public class Main{
   public static void main(String[] args){
-    final int YEARS = 10;
-    final double INTEREST = 0.2;
     Scanner scanner = new Scanner(System.in);
-    System.out.println("You Principal = ");
-    int principal = scanner.nextInt();
-    double mortgage = principal * Math.pow(100+INTEREST, YEARS);
-    System.out.println("Your mortgage payments is " + mortgage);
+    System.out.println("You number is: ");
+    int number = scanner.nextInt();
+    if(number%5==0){
+      System.out.println("Buzz");
+    }
+    if(number%3==0){
+      System.out.println("Fizz");
+    }
+    if(!((number%3==0) || (number%5==0))){
+      System.out.println(number);
+    }
   }
 }
