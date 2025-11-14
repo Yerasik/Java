@@ -1,11 +1,17 @@
-import java.util.Date;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.awt.*;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
 
 public class ExceptionsDemo{
   public static void show(){
-    sayHello(null);
+    try {
+      var reader = new FileReader("file.txt");
+      System.out.println("File Open");
+    } catch(FileNotFoundException ex){
+      System.out.println(ex.getMessage());
+    }
+
+   
   }
   public static void sayHello(String name){
     System.out.println(name.toUpperCase());
