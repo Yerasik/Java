@@ -2,17 +2,11 @@
 
 
 public class LambdaDemo{
+  public static String prefix = "-";
   public static void show(){
-    greet(new Printer(){
-      @Override
-      public void print(String message){
-        System.out.println(message);
-      }
-    });
-    
+    greet(System.out::println);    
   }
-  public static void greet( Printer printer){
-    printer.print("Hello world");
-
+  public static void greet ( Printer printer ){
+    printer.print("Hello World");
   }
 }
